@@ -6,6 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+    publicPath: '/'
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
@@ -26,6 +27,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
+      filename: 'index.html'
     }),
   ],
   devServer: {
